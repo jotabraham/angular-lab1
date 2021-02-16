@@ -1,0 +1,17 @@
+
+
+body {
+   background: linear-gradient(to right, #f857f6, #ff5858);
+   font-family: 'Open Sans';
+   font-weight: 300;
+   box-shadow: 0, 0, 5px, 0, rgba(0, 0, 0, 0.75);
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   width: 100vw;
+}
+
+.completeTask {
+   text-decoration: line-through;
+}
+

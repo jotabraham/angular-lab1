@@ -1,0 +1,20 @@
+
+<body>
+<form #taskForm="ngForm" (ngSubmit)="filterList(taskForm)" >
+   <h1>TODO List</h1>
+   <p>A list of things otherwise known as tasks:</p>
+   <input type="text" id="searchTask" name="searchTask" placeholder="Filter your tasks" ngModel >
+   <ol>
+      <li *ngFor="let todo of todos; index as i" >
+         <button (click)="completeTask(todo)" *ngIf="!todo.completed">Complete</button>
+         <p [ngClass]="{'completeTask': todo.completed}">{{todo.task}}</p>
+         <button (click)="deleteTask(i)">x</button>
+      </li>
+   </ol>
+</form>
+<br>
+<form #addForm="ngForm">
+   <input type="text" id="addTask" name="addTask" placeholder="Add your to-do" ngModel >
+   <button (click)="addTask(taskForm)">Add</button>
+</form>
+</body>
